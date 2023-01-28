@@ -22,16 +22,15 @@ public class ReadExcelDataClass {
 			Sheet sheet = factory.getSheet("SwiggyData");
 			for(Row rows : sheet) {
 				if(rows.getRowNum()!=0) {
-				ArrayList<String> list = new ArrayList<String>(2);
 				for (Cell cell3 : rows) {
 					if (cell3.getCellType() == Cell.CELL_TYPE_STRING) {
 						System.out.print(cell3.getStringCellValue()+" ");
-						list.add(cell3.getStringCellValue());
+					}else if(cell3.getCellType() == Cell.CELL_TYPE_NUMERIC) {
+						System.out.print(cell3.getNumericCellValue()+" ");
 					}
-				}
-				list.clear();
-				}
+				}System.out.println();}
 			}
+			System.out.println();
 			} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

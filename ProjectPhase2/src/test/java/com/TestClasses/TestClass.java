@@ -23,6 +23,7 @@ public class TestClass {
 		driver.findElement(By.xpath("//button[2]")).click();
 		//xpath for new panjabi hotel
 		//*[@class='styles_container__2GTLR styles_containerV2__1_U51']//descendant::div[3]
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div[1]/div[2]/div/div/div[4]/div[1]/div/div[2]/div/div/div[2]/div[2]/div/div[1]")).click();
 	}
 
 }
